@@ -30,7 +30,6 @@ io.on("connection", socket => {
     locationMap.delete(socket.id);
   });
 });
-server.listen(3000, err => {
-  if (err) throw err;
-  console.log("server started on port 3000");
+server.listen(process.env.PORT || 3000, function(){
+  console.log('listening on', server.address().port);
 });

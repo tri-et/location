@@ -1,12 +1,5 @@
 let map;
 let markers = new Map();
-let image = {
-  url:
-    "https://res.cloudinary.com/elitetech/image/upload/v1552448099/images_gnjmyz.jpg",
-  size: new google.maps.Size(20, 32),
-  origin: new google.maps.Point(0, 0),
-  anchor: new google.maps.Point(0, 32)
-};
 document.addEventListener("DOMContentLoaded", () => {
   const socket = io("/");
   socket.on("trackerDisconnected", id => {
@@ -26,13 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const marker = new google.maps.Marker({
           position,
           map,
-          icon: {
-            url:
-              "https://res.cloudinary.com/elitetech/image/upload/v1552448099/images_gnjmyz.jpg",
-            size: new google.maps.Size(20, 32),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(0, 32)
-          },
           title: id
         });
         markers.set(id, marker);

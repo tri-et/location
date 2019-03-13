@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   setInterval(() => {
     socket.emit("requestLocations");
-  }, 5000);
+  }, 2000);
 });
 function initMap() {
   navigator.geolocation.getCurrentPosition(

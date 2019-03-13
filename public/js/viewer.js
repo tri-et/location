@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const marker = new google.maps.Marker({
           position,
           map,
+          icon: {
+            url:
+              "https://res.cloudinary.com/elitetech/image/upload/v1552449542/icons8-fiat-500-48_vpo4ts.png",
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(30, 30)
+          },
           title: id
         });
         markers.set(id, marker);

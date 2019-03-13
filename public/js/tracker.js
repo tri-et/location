@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       positionOptions
     );
-  }, 2000);
+  }, 10000);
 });
 
 // if ("serviceWorker" in navigator) {
